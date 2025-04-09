@@ -1,0 +1,78 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import "tailwindcss";
+ 
+/* @tailwind base;
+ 
+@tailwind components;
+ 
+@tailwind utilities; */
+ 
+@layer base {
+  :root {
+    /* --font-display: "Roboto", sans-serif; */
+    --font-display: "Inter", sans-serif;
+    /* --font-display3: "Kanit", sans-serif; */
+    --font-display2:  "Montserrat", sans-serif;
+  }
+}
+ 
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #283e46 0%, #76b7b7 80%);
+  }
+
+  .dark-theme-text-gradient{
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #ffc300 0%, #ffc300 80%);
+  }
+}
+ 
+.font-display {
+  font-family: var(--font-display2);
+  line-height: 1.2;
+}
+.font-display-main {
+  font-family: var(--font-display);
+}
+
+input[type="password"]::-ms-reveal, 
+input[type="password"]::-ms-clear, 
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+@keyframes toastBorderFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.toast-border-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #b91c1c; /* red-700 */
+  animation: toastBorderFill 2.5s linear forwards;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+ 
